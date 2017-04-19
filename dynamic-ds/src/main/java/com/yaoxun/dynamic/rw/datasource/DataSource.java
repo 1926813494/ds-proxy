@@ -1,12 +1,13 @@
-package com.yaoxun.dynamic.ds;
+package com.yaoxun.dynamic.rw.datasource;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
+
 @Retention(RetentionPolicy.RUNTIME)  
 @Target(ElementType.METHOD)
 public @interface DataSource {
-	String value();
+	 DataSourceType value() default DataSourceType.WRITE;
 }

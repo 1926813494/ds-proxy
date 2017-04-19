@@ -6,5 +6,6 @@
   <packaging>pom</packaging>
   <modules>
   	<module>dynamic-ds</module>
+  	<module>ds-demo</module>
   </modules>
 </project>
