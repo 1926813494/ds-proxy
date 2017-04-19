@@ -7,7 +7,11 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 import org.springframework.jdbc.datasource.lookup.AbstractRoutingDataSource;
 
-
+/**
+ * 动态数据源的实现类
+ * @author Loren
+ * @date 2017年4月19日 下午5:22:03
+ */
 public class DynamicDataSource extends AbstractRoutingDataSource {
 
 	private Integer slaveCount;  

@@ -1,5 +1,10 @@
 package com.yaoxun.dynamic.rw.datasource;
 
+/**
+ * 存储当前线程使用的数据源类型
+ * @author Loren
+ * @date 2017年4月19日 下午5:22:29
+ */
 public class DynamicDataSourceHolder {
 
 	// 使用ThreadLocal记录当前线程的数据源key

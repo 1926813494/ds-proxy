@@ -10,6 +10,11 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.core.annotation.Order;
 
+/**
+ * 拦截使用了{@link DataSource}注解的目标
+ * @author Loren
+ * @date 2017年4月19日 下午5:18:07
+ */
 @Aspect
 @Order(1)
 public class DataSourceAspect {
