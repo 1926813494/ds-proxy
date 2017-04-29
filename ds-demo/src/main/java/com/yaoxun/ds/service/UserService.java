@@ -19,7 +19,7 @@ public class UserService {
 		userDao.save(user);
 	}
 	
-	@DataSource(DataSourceType.READ)
+	@DataSource(DataSourceType.MASTER_SALVE)
 	public User get(Integer id) {
 		return userDao.get(id);
 	}

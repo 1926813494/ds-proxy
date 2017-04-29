@@ -2,6 +2,7 @@ package com.yaoxun.ds.dao;
 
 import javax.annotation.Resource;
 
+import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
@@ -25,7 +26,11 @@ public class UserDao {
 	
 	public User get(Integer id) {
 		RowMapper<User> rowMapper = new BeanPropertyRowMapper<>(User.class);
-		return jdbcTemplate.queryForObject(getById, rowMapper, id);
+		try {
+			return jdbcTemplate.queryForObject(getById, rowMapper, id);			
+		}catch(EmptyResultDataAccessException e) {
+			return null;
+		}
 	}
 	
 }

@@ -7,11 +7,16 @@ import java.lang.annotation.Target;
 
 /**
  * 配置service使用的数据源
+ * 
  * @author Loren
  * @date 2017年4月19日 下午5:17:19
  */
-@Retention(RetentionPolicy.RUNTIME)  
+@Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.METHOD)
 public @interface DataSource {
-	 DataSourceType value() default DataSourceType.WRITE;
+	/**
+	 * 默认使用Master库，{@link DataSourceType}
+	 * @return
+	 */
+	DataSourceType value() default DataSourceType.MASTER;
 }
